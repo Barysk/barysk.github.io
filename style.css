@@ -14,7 +14,7 @@ h1 {
 	font-size: 1.75em;
 	font-weight: bold;
 	line-height: 1.2;
-	color: #e60000;
+	color: #ff0000;
 	text-align: center;
 
 }
@@ -23,7 +23,7 @@ h1 {
 h2 {
 	font-size: 1.5em;
 	line-height: 1.2;
-	color: #e60000;
+	color: #ff0000;
 	text-align: center;
 }
 
@@ -31,7 +31,7 @@ h2 {
 h3 {
 	font-size: 1.25em;
 	line-height: 1.2;
-	color: #e60000;
+	color: #ff0000;
 	text-align: center;
 }
 
@@ -53,22 +53,25 @@ img.center-image {
 
 /* Hyperlink */
 a {
-	color: #ff6600;
+	color: #ff66ff;
 	text-decoration: none;
 }
 a:hover {
 	text-decoration: underline;
 }
 
+dt {
+	font-weight: bold;
+}
+
+dd {
+	text-align: justify;
+}
+
 /* Footer style, mail, webpage, etc. */
 .footer-style {
 	text-align: center;
 	font-size: smaller
-}
-
-/* Paragraph default values */
-.aside-default {
-	text-align: justify;
 }
 
 /* Paragraph default values */
