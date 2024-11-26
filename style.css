@@ -1,0 +1,77 @@
+/* Body gray background, white font */
+body {
+	background: #111111;
+	color: #ffffe6;
+	margin: 1em auto;
+	max-width: 40em;
+	padding: 0 0.62em 3.24em;
+	font: 1.2em/1.62 serif;
+}
+
+/* Header 1 is centered and green and bold */
+h1 {
+	font-family: sans-serif;
+	font-size: 1.75em;
+	font-weight: bold;
+	line-height: 1.2;
+	color: #e60000;
+	text-align: center;
+
+}
+
+/* Header 1 is left sided and green and smaller */
+h2 {
+	font-size: 1.5em;
+	line-height: 1.2;
+	color: #e60000;
+	text-align: center;
+}
+
+/* Header 1 is left sided and green and italic and smaller */
+h3 {
+	font-size: 1.25em;
+	line-height: 1.2;
+	color: #e60000;
+	text-align: center;
+}
+
+/* Image centered and rounded */
+img.center-image {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 14px; /* Example border radius */
+	max-width: 100%;    /* Ensures the image does not exceed its container */
+	height: auto;       /* Maintains the aspect ratio of the image */
+}
+
+/* Centered Image Caption */
+.centered-image-caption {
+	text-align: center;
+	font-style: italic;
+}
+
+/* Hyperlink */
+a {
+	color: #ff6600;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+/* Footer style, mail, webpage, etc. */
+.footer-style {
+	text-align: center;
+	font-size: smaller
+}
+
+/* Paragraph default values */
+.aside-default {
+	text-align: justify;
+}
+
+/* Paragraph default values */
+.paragraph-default {
+	text-align: justify;
+}
