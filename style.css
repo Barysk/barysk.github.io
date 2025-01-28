@@ -1,7 +1,21 @@
+:root {
+	--background-color: #101010;
+	--accent-color: #ff5050;
+	--link-color: #ff9900;
+	--text-color: #ffffe6;
+}
+/*TEMP
+
+	--background-color: #111111;
+	--accent-color: #ff5050;
+	--link-color: #ff9900;
+	--text-color: #ffffe6;
+
+*/
 /* Body gray background, white font */
 body {
-	background: #111111;
-	color: #ffffe6;
+	background: var(--background-color);
+	color: var(--text-color);
 	margin: 1em auto;
 	max-width: 40em;
 	padding: 0 0.62em 3.24em;
@@ -14,7 +28,7 @@ h1 {
 	font-size: 1.75em;
 	font-weight: bold;
 	line-height: 1.2;
-	color: #ff0000;
+	color: var(--accent-color);
 	text-align: center;
 
 }
@@ -23,7 +37,7 @@ h1 {
 h2 {
 	font-size: 1.5em;
 	line-height: 1.2;
-	color: #ff0000;
+	color: var(--accent-color);
 	text-align: center;
 }
 
@@ -31,7 +45,7 @@ h2 {
 h3 {
 	font-size: 1.25em;
 	line-height: 1.2;
-	color: #ff0000;
+	color: var(--accent-color);
 	text-align: center;
 }
 
@@ -53,7 +67,7 @@ img.center-image {
 
 /* Hyperlink */
 a {
-	color: #ff66ff;
+	color: var(--link-color);
 	text-decoration: none;
 }
 a:hover {
