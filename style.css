@@ -54,7 +54,17 @@ img.center-image {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	border-radius: 8px; /* Example border radius */
+	border-radius: 16px; /* Example border radius */
+	max-width: 100%;    /* Ensures the image does not exceed its container */
+	height: auto;       /* Maintains the aspect ratio of the image */
+}
+
+/* Gif */
+img.center-gif {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 0px; /* Example border radius */
 	max-width: 100%;    /* Ensures the image does not exceed its container */
 	height: auto;       /* Maintains the aspect ratio of the image */
 }
