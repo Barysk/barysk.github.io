@@ -25,6 +25,26 @@ h1 {
 	text-align: center;
 }
 
+div {
+	background: var(--background-color);
+	color: var(--text-color);
+	max-width: 48em;
+	padding: 0.3em 0.3em;
+}
+
+button {
+	background: var(--background-color);
+	color: var(--link-color);
+	border: none;
+	font-size: 1em;
+	font-family: serif;
+	cursor: pointer;
+}
+
+button:hover {
+	text-decoration: underline;
+}
+
 h2 {
 	font-size: 1.6em;
 	text-align: center;
@@ -42,28 +62,6 @@ p {
 	text-align: justify;
 }
 
-img.center-image {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	border-radius: 16px;
-	max-width: 100%;
-	height: auto;
-}
-
-img.center-gif {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	border-radius: 0px;
-	max-width: 100%;
-	height: auto;
-}
-
-.centered-image-caption {
-	text-align: center;
-}
-
 a {
 	color: var(--link-color);
 	text-decoration: none;
@@ -79,10 +77,4 @@ dt {
 
 dd {
 	text-align: justify;
-}
-
-/* Footer style, mail, webpage, etc. */
-.footer-style {
-	text-align: center;
-	font-size: smaller
 }
