@@ -45,6 +45,10 @@ button:hover {
 	text-decoration: underline;
 }
 
+summary {
+	cursor: pointer;
+}
+
 h2 {
 	font-size: 1.6em;
 	text-align: center;
