@@ -1,5 +1,5 @@
 :root {
-	--background-color: #181818;
+	--background-color: linear-gradient(to right, #101010, #201020, #101010);;
 	--accent-color:     #ff5050;
 	--link-color:       #6699ff;
 	--text-color:       #ffffe6;
