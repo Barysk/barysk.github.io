@@ -1,8 +1,9 @@
 :root {
-	--background-color: #101010;
-	--accent-color: #ff5050;
-	--link-color: #ff9900;
-	--text-color: #ffffe6;
+	--background-color: #181818;
+	--accent-color:     #ff5050;
+	--link-color:       #6699ff;
+	--text-color:       #ffffe6;
+	--text-dt-color:    #ff9900;
 }
 
 body {
@@ -33,7 +34,7 @@ div {
 }
 
 button {
-	background: var(--background-color);
+	background: transparent;
 	color: var(--link-color);
 	border: none;
 	font-size: 1em;
@@ -75,7 +76,7 @@ a:hover {
 }
 
 dt {
-	color: #ff7525;
+	color: var(--text-dt-color);
 	font-size: 1.2em;
 }
 
