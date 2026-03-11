@@ -1,10 +1,9 @@
 :root {
 	--bg-color:      #000000;
 	--bg-blur-color: rgba(0, 0, 0, 0.7);
-	--accent-color:  #FFAAAA;
-	--link-color:    #FFAAFF;
 	--text-color:    #FFFFFF;
-	--text-dt-color: #FFAAAA;
+	--accent-color:  #FFCCDD;
+	--second-color:  #FF8888;
 	--tierlist-s: #FFDD44FF;
 	--tierlist-a: #88FF88FF;
 	--tierlist-b: #44BBFFFF;
@@ -84,9 +83,10 @@ div.slave {
 
 div.popup {
 	border: none;
-	box-shadow: 0 0 0.8em var(--shadow-color);
+	box-shadow: 0 0 0.8em var(--second-color);
 	width: 98%;
 	padding: 0.4em 1.6em;
+	font-size: 1.2em;
 	background: var(--bg-blur-color);
 	backdrop-filter: blur(var(--blur-filter));
 	-webkit-backdrop-filter: blur(var(--blur-filter));
@@ -115,12 +115,12 @@ div.mix-element {
 		flex-direction: column;
 	}
 
-	div.tierlist {
+	div.mix {
 		flex-direction: column;
 		align-items: center;
 	}
 
-	div.game { width: 100%; }
+	div.mix-element { width: 100%; }
 }
 
 .tierlist-s { text-shadow: 0 0 var(--text-shadow-size) var(--tierlist-s); }
@@ -131,8 +131,8 @@ div.mix-element {
 
 button {
 	background: transparent;
-	color: var(--link-color);
-	text-shadow: 0 0 var(--text-shadow-size) var(--link-color);
+	color: var(--accent-color);
+	text-shadow: 0 0 var(--text-shadow-size) var(--accent-color);
 	border: none;
 	font-size: 1em;
 	font-family: serif;
@@ -143,8 +143,24 @@ button:hover {
 	text-decoration: underline;
 }
 
+button.footnote {
+	display: inline;
+	vertical-align: super;
+	font-size: 0.75em;
+}
+
+details, summary {
+	display: inline;
+	vertical-align: super;
+	font-size: 0.75em;
+}
+
 summary {
 	cursor: pointer;
+}
+
+details[open] {
+	display: contents;
 }
 
 h2 {
@@ -165,17 +181,18 @@ p {
 }
 
 a {
-	color: var(--link-color);
-	text-shadow: 0 0 var(--text-shadow-size) var(--link-color);
+	color: var(--accent-color);
+	text-shadow: 0 0 var(--text-shadow-size) var(--accent-color);
 	text-decoration: none;
 }
+
 a:hover {
 	text-decoration: underline;
 }
 
 dt {
-	color: var(--text-dt-color);
-	text-shadow: 0 0 var(--text-shadow-size) var(--text-dt-color);
+	color: var(--second-color);
+	text-shadow: 0 0 var(--text-shadow-size) var(--second-color);
 	font-size: 1.2em;
 }
 
