@@ -29,7 +29,7 @@ body {
 	margin: 1em auto;
 	padding: 0 var(--gap-between-sections);
 	max-width: var(--max-width);
-	font: 1.2em/1.62 serif;
+	font: 1.2em/1.6 serif;
 }
 
 h1,h2,h3,h4 {
@@ -86,7 +86,6 @@ div.popup {
 	box-shadow: 0 0 0.8em var(--second-color);
 	width: 98%;
 	padding: 0.4em 1.6em;
-	font-size: 1.2em;
 	background: var(--bg-blur-color);
 	backdrop-filter: blur(var(--blur-filter));
 	-webkit-backdrop-filter: blur(var(--blur-filter));
@@ -111,6 +110,7 @@ div.mix-element {
 }
 
 @media (max-width: 800px) {
+	body { font: 1.0em/1.6 serif; }
 	div.slave {
 		flex-direction: column;
 	}
