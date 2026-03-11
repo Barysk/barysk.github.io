@@ -1,77 +1,138 @@
 :root {
-	--background-color: #161616;
-	--accent-color:     #FF8888;
-	--link-color:       #AAAAFF;
-	--text-color:       #FFFFFF;
-	--text-dt-color:    #FFCCAA;
-	--tierlist-s:                #FFDD44FF;
-	--tierlist-a:                #88FF88FF;
-	--tierlist-b:                #44BBFFFF;
-	--tierlist-c:                #FFAA44FF;
-	--tierlist-d:                #FF8877FF;
-	--tierlist-text-shadow-size: 1.0em;
+	--bg-color:      #000000;
+	--bg-blur-color: rgba(0, 0, 0, 0.7);
+	--accent-color:  #FFAAAA;
+	--link-color:    #FFAAFF;
+	--text-color:    #FFFFFF;
+	--text-dt-color: #FFAAAA;
+	--tierlist-s: #FFDD44FF;
+	--tierlist-a: #88FF88FF;
+	--tierlist-b: #44BBFFFF;
+	--tierlist-c: #FFAA44FF;
+	--tierlist-d: #FF8877FF;
+	--text-shadow-size: 0.4em;
+	--gap-between-sections: 0.8em;
+	--shadow-color: #000000;
+	--max-width: 50em;
+	--blur-filter: 12px;
 }
 
+*, *::before, *::after { box-sizing: border-box; }
+
 body {
-	background: var(--background-color);
+	background: var(--bg-color);
+	background-image: url("./img/webbg.webp");
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
 	color: var(--text-color);
 	margin: 1em auto;
-	max-width: 40em;
-	padding: 0 0.62em 3.24em;
+	padding: 0 var(--gap-between-sections);
+	max-width: var(--max-width);
 	font: 1.2em/1.62 serif;
 }
 
 h1,h2,h3,h4 {
 	line-height: 1.2;
-	color: var(--accent-color);
+	text-shadow: 0 0 var(--text-shadow-size) var(--text-color);
+	color: var(--text-color);
 }
 
 h1 {
-	font-size: 2.0em;
-	font-weight: bold;
+	text-shadow: 0 0 var(--text-shadow-size) var(--shadow-color);
+	font-size: 3.0em;
 	text-align: center;
 }
 
-div {
-	background: var(--background-color);
-	color: var(--text-color);
-	max-width: 48em;
+section {
+	width: 100%;
 	padding: 0.4em 1.6em;
+	background: var(--bg-blur-color);
+	backdrop-filter: blur(var(--blur-filter));
+	-webkit-backdrop-filter: blur(var(--blur-filter));
+	transition: 0.4s;
+	box-shadow: 0 0 0.8em var(--shadow-color);
+	border-radius: 0.4em;
 }
 
-div.tierlist {
+section.even { flex: 1; }
+
+section:hover {
+	box-shadow: 0 0 0.8em var(--text-color);
+}
+
+div {
+	color: var(--text-color);
+	max-width: var(--max-width);
+	border-radius: 0.4em;
+}
+
+div.main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--gap-between-sections);
+}
+
+div.slave {
+	width: 100%;
+	display: flex;
+	align-items: stretch;
+	gap: var(--gap-between-sections);
+}
+
+div.popup {
+	border: none;
+	box-shadow: 0 0 0.8em var(--shadow-color);
+	width: 98%;
+	padding: 0.4em 1.6em;
+	background: var(--bg-blur-color);
+	backdrop-filter: blur(var(--blur-filter));
+	-webkit-backdrop-filter: blur(var(--blur-filter));
+	transition: 0.4s;
+}
+
+div.popup:hover {
+	box-shadow: 0 0 0.8em var(--text-color);
+}
+
+div.mix {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-	gap: 1em;
+	gap: var(--gap-between-sections);
+	width: 100%;
 }
 
-div.game {
-	font-size: 0.9em;
+div.mix-element {
 	color: var(--text-color);
 }
 
-@media (max-width: 500px) {
+@media (max-width: 800px) {
+	div.slave {
+		flex-direction: column;
+	}
+
 	div.tierlist {
 		flex-direction: column;
 		align-items: center;
 	}
 
-	div.game {
-		width: 100%;
-	}
+	div.game { width: 100%; }
 }
 
-div.tierlist-s { text-shadow: 0 0 var(--tierlist-text-shadow-size) var(--tierlist-s); }
-div.tierlist-a { text-shadow: 0 0 var(--tierlist-text-shadow-size) var(--tierlist-a); }
-div.tierlist-b { text-shadow: 0 0 var(--tierlist-text-shadow-size) var(--tierlist-b); }
-div.tierlist-c { text-shadow: 0 0 var(--tierlist-text-shadow-size) var(--tierlist-c); }
-div.tierlist-d { text-shadow: 0 0 var(--tierlist-text-shadow-size) var(--tierlist-d); }
+.tierlist-s { text-shadow: 0 0 var(--text-shadow-size) var(--tierlist-s); }
+.tierlist-a { text-shadow: 0 0 var(--text-shadow-size) var(--tierlist-a); }
+.tierlist-b { text-shadow: 0 0 var(--text-shadow-size) var(--tierlist-b); }
+.tierlist-c { text-shadow: 0 0 var(--text-shadow-size) var(--tierlist-c); }
+.tierlist-d { text-shadow: 0 0 var(--text-shadow-size) var(--tierlist-d); }
 
 button {
 	background: transparent;
 	color: var(--link-color);
+	text-shadow: 0 0 var(--text-shadow-size) var(--link-color);
 	border: none;
 	font-size: 1em;
 	font-family: serif;
@@ -105,6 +166,7 @@ p {
 
 a {
 	color: var(--link-color);
+	text-shadow: 0 0 var(--text-shadow-size) var(--link-color);
 	text-decoration: none;
 }
 a:hover {
@@ -113,6 +175,7 @@ a:hover {
 
 dt {
 	color: var(--text-dt-color);
+	text-shadow: 0 0 var(--text-shadow-size) var(--text-dt-color);
 	font-size: 1.2em;
 }
 
