@@ -11,9 +11,10 @@
 	--tierlist-d: #FF8877FF;
 	--text-shadow-size: 0.4em;
 	--gap-between-sections: 0.8em;
-	--shadow-color: #000000;
+	--shadow-color: #444444;
 	--max-width: 50em;
 	--blur-filter: 12px;
+	--borders-radius: 0px
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -21,10 +22,10 @@
 body {
 	background: var(--bg-color);
 	background-image: url("./img/webbg.webp");
-	background-size: cover;
+	background-size: 0.4em;
 	background-position: center;
 	background-attachment: fixed;
-	background-repeat: no-repeat;
+	background-repeat: repeat;
 	color: var(--text-color);
 	margin: 1em auto;
 	padding: 0 var(--gap-between-sections);
@@ -39,7 +40,7 @@ h1,h2,h3,h4 {
 }
 
 h1 {
-	text-shadow: 0 0 var(--text-shadow-size) var(--shadow-color);
+	text-shadow: 0 0 var(--text-shadow-size) var(--text-color);
 	font-size: 3.0em;
 	text-align: center;
 }
@@ -52,7 +53,7 @@ section {
 	-webkit-backdrop-filter: blur(var(--blur-filter));
 	transition: 0.4s;
 	box-shadow: 0 0 0.8em var(--shadow-color);
-	border-radius: 0.4em;
+	border-radius: var(--borders-radius);
 }
 
 section.even { flex: 1; }
@@ -64,7 +65,7 @@ section:hover {
 div {
 	color: var(--text-color);
 	max-width: var(--max-width);
-	border-radius: 0.4em;
+	border-radius: var(--borders-radius);
 }
 
 div.main {
