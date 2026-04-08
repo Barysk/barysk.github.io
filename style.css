@@ -1,9 +1,10 @@
 :root {
-	--bg-color:      #000000;
-	--bg-blur-color: rgba(0, 0, 0, 0.7);
-	--text-color:    #FFFFFF;
-	--accent-color:  #FFCCDD;
-	--second-color:  #FF8888;
+	--bg-color:       #000000;
+	--bg-section:     rgba(12,12,12,0.4);
+	--bg-section-sel: rgba(4,4,4, 0.8);
+	--text-color:   #FFFFFF;
+	--accent-color: #FFCCDD;
+	--second-color: #FF8888;
 	--tierlist-s: #FFDD44FF;
 	--tierlist-a: #88FF88FF;
 	--tierlist-b: #44BBFFFF;
@@ -11,10 +12,10 @@
 	--tierlist-d: #FF8877FF;
 	--text-shadow-size: 0.4em;
 	--gap-between-sections: 0.8em;
-	--shadow-color: #444444;
-	--max-width: 50em;
-	--blur-filter: 12px;
-	--borders-radius: 0px
+	--gap-between-mix-elements: 1.6em;
+	--max-width: 70em;
+	--borders-radius: 0px;
+	--font: monospace;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -30,7 +31,7 @@ body {
 	margin: 1em auto;
 	padding: 0 var(--gap-between-sections);
 	max-width: var(--max-width);
-	font: 1.2em/1.6 serif;
+	font: 1.2em/1.6 var(--font);
 }
 
 h1,h2,h3,h4 {
@@ -47,19 +48,18 @@ h1 {
 
 section {
 	width: 100%;
-	padding: 0.4em 1.6em;
-	background: var(--bg-blur-color);
-	backdrop-filter: blur(var(--blur-filter));
-	-webkit-backdrop-filter: blur(var(--blur-filter));
+	padding: 0.8em 1.2em;
+	background: var(--bg-section);
 	transition: 0.4s;
-	box-shadow: 0 0 0.8em var(--shadow-color);
 	border-radius: var(--borders-radius);
+	box-shadow: 0 0 0.8em var(--bg-section);
 }
 
 section.even { flex: 1; }
 
 section:hover {
-	box-shadow: 0 0 0.8em var(--text-color);
+	background: var(--bg-section-sel);
+	box-shadow: 0 0 0.8em var(--bg-section-sel);
 }
 
 div {
@@ -87,14 +87,12 @@ div.popup {
 	box-shadow: 0 0 0.8em var(--second-color);
 	width: 98%;
 	padding: 0.4em 1.6em;
-	background: var(--bg-blur-color);
-	backdrop-filter: blur(var(--blur-filter));
-	-webkit-backdrop-filter: blur(var(--blur-filter));
+	background: var(--bg-color);
 	transition: 0.4s;
 }
 
 div.popup:hover {
-	box-shadow: 0 0 0.8em var(--text-color);
+	box-shadow: 0 0 1.2em var(--second-color);
 }
 
 div.mix {
@@ -102,16 +100,14 @@ div.mix {
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-	gap: var(--gap-between-sections);
+	gap: 0em var(--gap-between-mix-elements);
 	width: 100%;
 }
 
-div.mix-element {
-	color: var(--text-color);
-}
+div.mix-element { color: var(--text-color); }
 
 @media (max-width: 800px) {
-	body { font: 1.0em/1.6 serif; }
+	body { font: 1.0em/1.6 var(--font); }
 	div.slave {
 		flex-direction: column;
 	}
@@ -136,13 +132,11 @@ button {
 	text-shadow: 0 0 var(--text-shadow-size) var(--accent-color);
 	border: none;
 	font-size: 1em;
-	font-family: serif;
+	font-family: var(--font);
 	cursor: pointer;
 }
 
-button:hover {
-	text-decoration: underline;
-}
+button:hover { text-decoration: underline; }
 
 button.footnote {
 	display: inline;
@@ -156,30 +150,18 @@ details, summary {
 	font-size: 0.75em;
 }
 
-summary {
-	cursor: pointer;
-}
+summary { cursor: pointer; }
 
-details[open] {
-	display: contents;
-}
+details[open] { display: contents; }
 
 h2 {
 	font-size: 1.6em;
 	text-align: center;
 }
 
-h3 {
-	font-size: 1.2em;
-}
-
-h4 {
-	font-size: 1.0em;
-}
-
-p {
-	text-align: justify;
-}
+h3 { font-size: 1.2em; }
+h4 { font-size: 1.0em; }
+p { text-align: justify; }
 
 a {
 	color: var(--accent-color);
@@ -187,9 +169,9 @@ a {
 	text-decoration: none;
 }
 
-a:hover {
-	text-decoration: underline;
-}
+a:hover { text-decoration: underline; }
+
+ul { list-style-type: square; }
 
 dt {
 	color: var(--second-color);
@@ -197,6 +179,4 @@ dt {
 	font-size: 1.2em;
 }
 
-dd {
-	text-align: justify;
-}
+dd { text-align: justify; }
